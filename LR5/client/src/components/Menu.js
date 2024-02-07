@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import './../styles/Menu.css'; // Подключаем стили для меню
+import './../styles/Menu.css';
 
-const Menu = ({ onSubmit, onCancel, initialData }) => {
-  const [formData, setFormData] = useState(initialData || {}); // Используем начальные данные для редактирования, если они переданы
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
+const Menu = ({ onSubmit, onCancel, onSubmitSuccess, initialData }) => {
+  const [formData, setFormData] = useState(initialData || {});
 
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(formData);
+    onSubmitSuccess(formData);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   return (

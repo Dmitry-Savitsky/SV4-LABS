@@ -5,6 +5,7 @@
     justify-content: left;
     background-color: #dddddd;
     padding-top: 1px;
+    min-height: 70vh;
 }
 
 .notary-card {

@@ -4,6 +4,8 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: left;
+    width: 12.5rem;
+    height: 17rem;
 }
 
 .notary-card img {
