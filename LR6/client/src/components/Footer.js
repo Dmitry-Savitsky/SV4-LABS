@@ -1,5 +1,6 @@
 import React from 'react';
 import './../styles/Footer.css';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -10,7 +11,7 @@ const Footer = () => {
                 <p>Адрес: ул. Примерная, д. 123, г. Примерный</p>
             </div>
             <div className="rights">
-                <p>© 2024 Все права защищены</p>
+            <Link to="/aboutUs" style={{ textDecoration: 'none', color: 'inherit' }}> О нас </Link>
             </div>
             <div className="social-links">
                 <a href="https://www.facebook.com/">Facebook</a>
