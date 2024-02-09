@@ -1,13 +1,13 @@
 .footer-container {
-    position: fixed;
-  bottom: 0;
-  width: 100%;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     background-color: #9b9779;
     color: #fff;
+    padding-top: 10px;
 }
 
 .footer-container p {

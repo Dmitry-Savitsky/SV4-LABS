@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <div className="about-us-page-container">
       <Container>
-        <Row className="">
+        <Row className="justify-content-center">
           <Col>
             <h1>О нас</h1>
 
