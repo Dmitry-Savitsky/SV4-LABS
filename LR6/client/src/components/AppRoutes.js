@@ -6,6 +6,7 @@ import Notaries from '../pages/Notaries';
 import ServicesAccounting from '../pages/ServicesAccounting';
 import AboutUs from '../pages/AboutUs';
 import Services from '../pages/Services'
+import Clients from '../pages/Clients';
 
 const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Route path="/servicesAccounting" element={<ServicesAccounting />} />
       <Route path="/aboutUs" element={<AboutUs />} />
       <Route path="/services" element={<Services />} />
+      <Route path='/clinets' element={<Clients />} />
     </Routes>
   );
 };

@@ -13,6 +13,9 @@ const Header = () => {
           <Link to="/notaries"> Нотариусы </Link>
         </li>
         <li>
+          <Link to="/clinets"> Клиенты </Link>
+        </li>
+        <li>
           <Link to="/servicesAccounting"> Учет услуг </Link>
         </li>
       </ul>
