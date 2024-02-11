@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateFormData } from '../redux/actions';
 import './../styles/Menu.css';
 
 const Menu = ({ onSubmit, onCancel, onSubmitSuccess, initialData }) => {
-  const [formData, setFormData] = useState(initialData || {});
+  const dispatch = useDispatch();
+  const formData = useSelector((state) => state.formData);
+
+  useEffect(() => {
+    if (initialData) {
+      dispatch(updateFormData(initialData));
+    }
+  }, [dispatch, initialData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,7 +21,7 @@ const Menu = ({ onSubmit, onCancel, onSubmitSuccess, initialData }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    dispatch(updateFormData({ ...formData, [name]: value }));
   };
 
   return (

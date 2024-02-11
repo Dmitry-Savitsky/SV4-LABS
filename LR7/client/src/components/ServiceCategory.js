@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, ListGroup, Card, Button } from 'react-bootstrap';
-import ServiceItem from './ServiceItem';
 
 const ServiceCategory = ({ category, items }) => {
   const [services, setServices] = useState(items);
